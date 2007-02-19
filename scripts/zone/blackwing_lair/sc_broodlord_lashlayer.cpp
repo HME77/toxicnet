@@ -38,7 +38,7 @@ struct MANGOS_DLL_DECL boss_broodlordAI : public ScriptedAI
 
     void Reset()
     {
-        Cleave_Timer = 25000;      //These times are probably wrong
+        Cleave_Timer = 10000;      //These times are probably wrong
         BlastWave_Timer = 35000;
         MortalStrike_Timer = 15000;
         KnockBack_Timer = 25000;
@@ -123,7 +123,7 @@ struct MANGOS_DLL_DECL boss_broodlordAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_CLEAVE);
 
                 //25 seconds until we should cast this agian
-                Cleave_Timer = 25000;
+                Cleave_Timer = 10000;
             }else Cleave_Timer -= diff;
 
             // BlastWave(fixed.thx Ntsc)
@@ -133,7 +133,7 @@ struct MANGOS_DLL_DECL boss_broodlordAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_BLASTWAVE);                
 
                 //35 seconds until we should cast this again
-                BlastWave_Timer = 35000;
+                BlastWave_Timer = 15000;
             }else BlastWave_Timer -= diff;
             
             //MortalStrike_Timer
@@ -143,7 +143,7 @@ struct MANGOS_DLL_DECL boss_broodlordAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_MORTALSTRIKE);
                 // he casts it first after 15 seconds and then each 35 seconds. <- now it should be desyncronised from blastwave.Thx Ntsc.
                 //25 seconds until we should cast this agian
-                MortalStrike_Timer = 35000;
+                MortalStrike_Timer = 18000;
             }else MortalStrike_Timer -= diff;
             
                 //KnockBack_Timer

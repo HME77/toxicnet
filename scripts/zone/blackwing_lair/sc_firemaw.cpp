@@ -31,8 +31,8 @@ struct MANGOS_DLL_DECL boss_firemawAI : public ScriptedAI
     
     void Reset()
     {
-        ShadowFlame_Timer = 45000;      //These times are probably wrong
-        WingBuffet_Timer = 25000;
+        ShadowFlame_Timer = 23000;      //These times are probably wrong
+        WingBuffet_Timer = 15000;
         FlameBuffet_Timer = 5000;
         InCombat = false;
 
@@ -93,7 +93,7 @@ struct MANGOS_DLL_DECL boss_firemawAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_SHADOWFLAME);
 
                 //45 seconds till recast
-                ShadowFlame_Timer = 45000;
+                ShadowFlame_Timer = 23000;
             }else ShadowFlame_Timer -= diff;
 
             //WingBuffet_Timer
@@ -103,7 +103,7 @@ struct MANGOS_DLL_DECL boss_firemawAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_WINGBUFFET);
 
                 //25 seconds till recast
-                WingBuffet_Timer = 25000;
+                WingBuffet_Timer = 15000;
             }else WingBuffet_Timer -= diff;
             
             //FlameBuffet_Timer

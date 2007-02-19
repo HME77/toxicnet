@@ -45,7 +45,7 @@ struct MANGOS_DLL_DECL boss_razorgoreAI : public ScriptedAI
     {
         Cleave_Timer = 10000;      //These times are probably wrong
         WarStomp_Timer = 20000;
-        FireballVolley_Timer = 20000;
+        FireballVolley_Timer = 25000;
         Conflagration_Timer = 6000;
         InCombat = false;
 
@@ -127,7 +127,7 @@ struct MANGOS_DLL_DECL boss_razorgoreAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_FIREBALLVOLLEY);
 
                 //20 seconds until we should cast this agian
-                FireballVolley_Timer = 20000;
+                FireballVolley_Timer = 25000;
             }else FireballVolley_Timer -= diff;
             
                         //Conflagration_Timer
@@ -137,7 +137,7 @@ struct MANGOS_DLL_DECL boss_razorgoreAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_CONFLAGRATION);
 
                 //30 seconds until we should cast this agian
-                Conflagration_Timer = 17000;
+                Conflagration_Timer = 13500;
             }else Conflagration_Timer -= diff;
 
             //If we are within range melee the target
