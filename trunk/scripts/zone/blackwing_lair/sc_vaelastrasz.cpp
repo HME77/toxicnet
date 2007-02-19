@@ -70,7 +70,7 @@ struct MANGOS_DLL_DECL boss_vaelAI : public ScriptedAI
         FlameBreath_Timer = 25000;
         BurningAdrenalineCaster_Timer = 15000;
         BurningAdrenalineTank_Timer = 45000;
-        FireNova_Timer = 5000;
+        FireNova_Timer = 10000;
         TailSwipe_Timer = 20000;
         HasYelled = false;
         DoingSpeach = false;
@@ -249,7 +249,7 @@ struct MANGOS_DLL_DECL boss_vaelAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_FIRENOVA);
 
                 //5 seconds until we should cast this again
-                FireNova_Timer = 5000;
+                FireNova_Timer = 10000;
             }else FireNova_Timer -= diff;
             
             //TailSwipe_Timer

@@ -31,9 +31,9 @@ struct MANGOS_DLL_DECL boss_ebonrocAI : public ScriptedAI
 
     void Reset()
     {
-        ShadowFlame_Timer = 60000;      //These times are probably wrong
+        ShadowFlame_Timer = 15000;      //These times are probably wrong
         WingBuffet_Timer = 30000;
-        ShadowOfEbonroc_Timer = 45000;
+        ShadowOfEbonroc_Timer = 5000;
         InCombat = false;
 
         if (m_creature)
@@ -96,7 +96,7 @@ struct MANGOS_DLL_DECL boss_ebonrocAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_SHADOWFLAME);
 
                 //60 seconds until we should cast this agian
-                ShadowFlame_Timer = 60000;
+                ShadowFlame_Timer = 15000;
             }else ShadowFlame_Timer -= diff;
 
             //Wing Buffet Timer
@@ -106,7 +106,7 @@ struct MANGOS_DLL_DECL boss_ebonrocAI : public ScriptedAI
                 DoCast(m_creature->getVictim(),SPELL_WINGBUFFET);
 
                 //30 seconds until we should cast this agian
-                WingBuffet_Timer = 30000;
+                WingBuffet_Timer = 10000;
             }else WingBuffet_Timer -= diff;
 
             //Shadow of Ebonroc Timer
