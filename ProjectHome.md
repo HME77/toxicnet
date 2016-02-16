@@ -1,0 +1,1 @@
+toxicnet contains a collection of C++ Artificial Intelligence scripts for creatures in MMORPGs
